@@ -20,7 +20,7 @@ namespace UserRegistration.Api.Controllers
         public async Task<IActionResult> Create([FromBody] CreateUserRequestDto request)
         {
             await _userService.CreateUserAsync(request);
-            return Ok(new { message = "User created successfully" });
+            return Ok(new { message = UserMessages.UserCreated });
         }
     }
 }
